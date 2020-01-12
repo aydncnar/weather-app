@@ -1,5 +1,5 @@
 /*
-* Aydın Çınar <cinar.aydinn@gmail.com>
+* Aydin Cinar <cinar.aydinn@gmail.com>
 * Enums 
 */
 

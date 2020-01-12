@@ -19,40 +19,16 @@ export default {
     },  
     computed: {
         forecast() {            
-            if(!this.loading) {               
-                return this.data.data.DailyForecasts;
-            }
-            return false;
+            return this.data.data.DailyForecasts;
         },
-        dayArray() {
-            if(!this.loading) {
-                const dayArray = [];
-                this.forecast.forEach((item) => {
-                    dayArray.push(item.Temperature.Maximum.Value);
-                });        
-                return dayArray;                
-            } 
-            return [];
+        dayArray() {  
+            return this.forecast.map(item => item.Temperature.Maximum.Value);            
         },
         nightArray() {
-            if(!this.loading) {
-                const nightArray = [];
-                this.forecast.forEach((item) => {
-                    nightArray.push(item.Temperature.Minimum.Value);
-                });        
-                return nightArray;                
-            }
-            return [];
+            return this.forecast.map(item => item.Temperature.Maximum.Value);               
         },   
         dateArray() {
-            if(!this.loading) {
-                const dateArray = [];
-                this.forecast.forEach((item) => {
-                    dateArray.push(moment(item.Date).format('Do MMM'));
-                });
-                return dateArray;                
-            }
-            return [];
+            return this.forecast.map(item => moment(item.Date).format('Do MMM'));   
         },                     
     },
     methods: {
@@ -74,7 +50,7 @@ export default {
         }
     },
     watch: {
-        data: function () {
+        data () {
             this.update();
         },
     },
@@ -87,9 +63,7 @@ export default {
                 title: {
                     text: 'Forecast'
                 },
-                xAxis: {
-                    categories: []
-                },
+                xAxis: {categories: []},
                 yAxis: {
                     allowDecimals: true,                    
                     title: {
@@ -112,9 +86,6 @@ export default {
                 },
             }
         }
-    },
-        
+    }       
 }
 </script>
-
-

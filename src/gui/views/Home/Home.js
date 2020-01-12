@@ -1,5 +1,5 @@
 /*
-* Aydın Çınar <cinar.aydinn@gmail.com>
+* Aydin Cinar <cinar.aydinn@gmail.com>
 * Home Page Scripts 
 */
 
@@ -24,7 +24,7 @@ export default {
     ForeCastGraphics,
     ForeCastTable
   },
-  data: function () {
+  data () {
     return {
       city: '',
       cityName: '',

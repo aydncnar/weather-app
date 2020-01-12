@@ -55,10 +55,7 @@ export default {
     },  
     computed: {
         forecast() {
-            if(!this.loading) {               
-                return this.data.data.DailyForecasts;
-            }
-            return false;
+            return this.data.data.DailyForecasts;
         },
     },
     data() {
@@ -100,6 +97,10 @@ export default {
 
     @media only screen and (max-width: 1024px) {
         width: 50%
-    }   
+    } 
+
+    @media only screen and (min-width: 1024px) {
+        margin-right: 8px;
+    }       
 }
 </style>

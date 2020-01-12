@@ -1,6 +1,6 @@
 /*
 * Aydin Cinar <cinar.aydinn@gmail.com>
-* API  Methods
+* API Methods
 */
 
 import Base from './base';

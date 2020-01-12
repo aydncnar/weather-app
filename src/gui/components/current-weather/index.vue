@@ -28,7 +28,7 @@
             </div>
         </div>
         <div class="col-12">
-            <div class="data-row">
+            <div class="data-row data-row--last">
                 <strong>Real Feel Tempature Shade: </strong>
                 {{weather.RealFeelTemperatureShade.Metric.Value}} ° {{weather.RealFeelTemperatureShade.Metric.Unit}}
             </div>
@@ -48,10 +48,7 @@ export default {
     },    
     computed: {
         weather() {
-            if(!this.loading) {                    
-                return this.data.data[0];
-            }
-            return false;
+            return this.data.data[0];
         },
         icon() {
             return getWeatherIcon(`0${this.weather.WeatherIcon}`)
