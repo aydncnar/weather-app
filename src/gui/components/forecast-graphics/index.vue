@@ -25,7 +25,7 @@ export default {
             return this.forecast.map(item => item.Temperature.Maximum.Value);            
         },
         nightArray() {
-            return this.forecast.map(item => item.Temperature.Maximum.Value);               
+            return this.forecast.map(item => item.Temperature.Minimum.Value);               
         },   
         dateArray() {
             return this.forecast.map(item => moment(item.Date).format('Do MMM'));   
@@ -67,7 +67,7 @@ export default {
                 yAxis: {
                     allowDecimals: true,                    
                     title: {
-                        text: 'Tempature'
+                        text: 'Temperature'
                     }
                 },
                 tooltip: {

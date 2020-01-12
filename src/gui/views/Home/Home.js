@@ -55,7 +55,7 @@ export default {
     },
     fetchForeCastData() {
         API.get5DaysWeather(this.city).then(resp => {
-          this.forecastLoading = false;        
+          this.forecastLoading = false;                 
           this.forecastWeather = resp;
         });
     }    

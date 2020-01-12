@@ -10,7 +10,7 @@ import { city } from '../../src/enums';
 describe('Should render Select : ', () => {
 
     const factory = (values = {}) => {
-        return shallowMount(Select, values)
+        return shallowMount(Select, values);
     }    
 
     it('render is successfully when null passed', () => {

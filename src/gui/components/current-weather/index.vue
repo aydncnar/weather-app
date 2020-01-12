@@ -1,7 +1,7 @@
 <template>
     <div class="row" v-if="!loading">
         <div class="col-md-12">
-            <h3>{{city}} Current Weather</h3>
+            <h3>{{city}}</h3>
         </div>
         <div class="col-12">        
             <div class="data-row text-center">
@@ -11,19 +11,19 @@
         </div>    
         <div class="col-12">
             <div class="data-row">
-                <strong>Time:</strong>
+                <strong>Measure Time: </strong>
                 {{date}}
             </div>
         </div>         
         <div class="col-12">
             <div class="data-row">
-                <strong>Temperature : </strong>
+                <strong>Temperature: </strong>
                 {{weather.Temperature.Metric.Value}} ° {{weather.Temperature.Metric.Unit}}
             </div>
         </div>
         <div class="col-12">
             <div class="data-row">
-                <strong>Real Feel Tempature : </strong>
+                <strong>Real Feel Tempature: </strong>
                 {{weather.RealFeelTemperature.Metric.Value}} °{{weather.RealFeelTemperature.Metric.Unit}}
             </div>
         </div>
